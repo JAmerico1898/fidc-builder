@@ -1,4 +1,6 @@
 import streamlit as st
+import streamlit.components.v1 as components
+from pathlib import Path
 
 # Configuração da página
 st.set_page_config(
@@ -83,13 +85,11 @@ pagina = st.sidebar.radio(
         "📊 Módulo 1: Viabilidade Econômica",
         "🏗️ Módulo 2: Arquiteto de Classes",
         "🛡️ Módulo 3: Subordinação e Risco",
-        "✅ Módulo 4: Checklist Regulatório"
+        "✅ Módulo 4: Checklist Regulatório",
+        "🤖 Módulo 5: Animação"
     ]
 )
 
-st.sidebar.markdown("---")
-st.sidebar.markdown("**Desenvolvido para fins pedagógicos**")
-st.sidebar.markdown("*Baseado na Resolução CVM 175/2022*")
 
 # Página Inicial
 if pagina == "🏠 Início":
@@ -172,3 +172,52 @@ elif pagina == "🛡️ Módulo 3: Subordinação e Risco":
 elif pagina == "✅ Módulo 4: Checklist Regulatório":
     from modulos import modulo4_checklist
     modulo4_checklist.run()
+    
+elif pagina == "🤖 Módulo 5: Animação":
+    import streamlit as st
+    import streamlit.components.v1 as components
+    from pathlib import Path
+    
+    st.title("🤖 Visualização 3D Interativa - FIDC Varejo")
+    st.markdown("### Animação do Fluxo Operacional")
+    
+    # Ler o arquivo HTML que está dentro da pasta modulos
+    html_file = Path("modulos/modulo5_animação.html")
+    
+    if html_file.exists():
+        with open(html_file, 'r', encoding='utf-8') as f:
+            html_content = f.read()
+        
+        # Renderizar o HTML com altura ajustável
+        # Calcula aproximadamente 85% da altura da viewport para não ultrapassar
+        components.html(html_content, height=700, scrolling=False)
+                
+        st.markdown("---")
+        st.info("💡 **Instruções:** Use os botões 'Anterior' e 'Próximo' na parte inferior para navegar pelos 7 passos do FIDC.")
+        
+    else:
+        st.error(f"❌ Arquivo 'modulo5_animacao.html' não encontrado na pasta modulos.")
+        st.write(f"Caminho esperado: {html_file.absolute()}")
+        
+# -----------------------------------------------------------------------------
+# RODAPÉ
+# -----------------------------------------------------------------------------
+# Footer
+st.divider()
+
+st.markdown(
+    """
+    <div style='text-align: center;'>
+        <p style='font-size: 0.9em; color: gray;'>
+            © 2025 Jornada de estruturação de um FIDC | Desenvolvido com fins educacionais
+        </p>
+        <p style='font-size: 0.9em; color: gray;'>
+            Baseado na Resolução CVM 175/2022
+        </p>
+        <p style='font-size: 0.9em; color: gray;'>
+            Prof. José Américo – Coppead
+        </p>
+    </div>
+    """,
+    unsafe_allow_html=True
+)
