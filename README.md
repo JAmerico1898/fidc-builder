@@ -32,6 +32,9 @@ Este simulador foi desenvolvido para executivos de finanças, advogados e gestor
 - Identifica tipo de registro adequado
 - Estima prazos e custos do processo
 
+### Módulo 5: Animação
+- Caminhe pelo passo-a-passo de constituição de um FIDC
+
 ## 🚀 Como Executar
 
 ### Instalação de Dependências
