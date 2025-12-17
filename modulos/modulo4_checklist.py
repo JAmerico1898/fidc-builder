@@ -213,7 +213,7 @@ def run():
                     min_value=30,
                     max_value=365,
                     value=180,
-                    step=30
+                    step=5
                 )
                 
                 if prazo_medio <= 365:

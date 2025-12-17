@@ -93,18 +93,6 @@ def run():
         
         st.markdown("---")
         
-        # Cenários rápidos
-        st.markdown("#### ⚡ Cenários Rápidos")
-        
-        col_btn1, col_btn2 = st.columns(2)
-        
-        with col_btn1:
-            if st.button("😊 Cenário Benigno", use_container_width=True):
-                st.session_state.perda = pl_total * 0.05
-        
-        with col_btn2:
-            if st.button("😱 Cenário Extremo", use_container_width=True):
-                st.session_state.perda = pl_total * 0.35
     
     with col_visual:
         st.markdown("### 📊 Visualização da Estrutura de Capital")

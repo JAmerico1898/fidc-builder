@@ -86,7 +86,7 @@ pagina = st.sidebar.radio(
         "🏗️ Módulo 2: Arquiteto de Classes",
         "🛡️ Módulo 3: Subordinação e Risco",
         "✅ Módulo 4: Checklist Regulatório",
-        "🤖 Módulo 5: Animação"
+        "✨ Módulo 5: Animação"
     ]
 )
 
@@ -125,6 +125,10 @@ if pagina == "🏠 Início":
         - Regras de acesso ao varejo
         - Diferença entre ativos padronizados e não-padronizados
         - Requisitos para registro automático
+
+        ### 5️⃣ Animação - FIDC Monocedente
+        - Passo-a-passo do funcionamento
+
         """)
     
     with col2:
@@ -173,12 +177,12 @@ elif pagina == "✅ Módulo 4: Checklist Regulatório":
     from modulos import modulo4_checklist
     modulo4_checklist.run()
     
-elif pagina == "🤖 Módulo 5: Animação":
+elif pagina == "✨ Módulo 5: Animação":
     import streamlit as st
     import streamlit.components.v1 as components
     from pathlib import Path
     
-    st.title("🤖 Visualização 3D Interativa - FIDC Varejo")
+    st.title("✨ Visualização 3D Interativa - FIDC Varejo")
     st.markdown("### Animação do Fluxo Operacional")
     
     # Ler o arquivo HTML que está dentro da pasta modulos

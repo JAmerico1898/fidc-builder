@@ -32,7 +32,7 @@ def run():
             "Taxa Média de Cessão / Yield da Carteira (% a.a.)",
             min_value=8.0,
             max_value=25.0,
-            value=15.0,
+            value=20.0,
             step=0.5,
             help="Rentabilidade bruta que os ativos geram"
         )
@@ -394,7 +394,7 @@ def run():
         st.write("""
         Se sua operação não atinge o ponto de equilíbrio:
         
-        1. **FIDC Multi-cedente:** Entre como cotista em um fundo existente que já possui 
+        1. **FIDC Multi-cedente:** Entre como cedente em um fundo existente que já possui 
            a estrutura montada. Você compartilha os custos fixos com outros cedentes.
         
         2. **Cessão Direta:** Para volumes muito pequenos, considere a cessão direta de 
